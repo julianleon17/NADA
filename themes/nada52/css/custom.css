@@ -1,0 +1,14 @@
+/* user defined custom styles or overrides only */
+
+.catalog-search-container #search-keywords {
+  border: 1px solid var(--warning-color) !important;
+}
+
+.form-control:focus {
+  border-color: var(--warning-color);
+  box-shadow: 0 0 0 .2rem rgba(238, 255, 0, 0.25);
+}
+
+.wb-library-search--browse a {
+  color: var(--warning-color);
+}
