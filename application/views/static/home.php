@@ -68,11 +68,11 @@ $data_types=array(
                         <div class="col">
                             <input type="hidden" name="sort_by" value="rank">
                             <input type="hidden" name="sort_order" value="desc">
-                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Keywords..." name="sk">
+                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="<?php echo t('keywords');?>..." name="sk">
                         </div>
                         <!--end of col-->
                         <div class="col-auto">
-                            <button class="btn btn-lg btn-warning text-white" type="submit">Search</button>
+                            <button class="btn btn-lg btn-warning text-white" type="submit"><?php echo t('search');?></button>
                         </div>
                         <!--end of col-->
 

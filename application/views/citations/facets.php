@@ -12,8 +12,8 @@
                     <input maxlength="100" type="text" id="keywords" name="keywords" value="<?php echo form_prep($this->input->get('keywords')); ?>" class="form-control" placeholder="keywords">
                     <input type="hidden" name="collection" value="<?php echo form_prep($active_repo);?>"/>
                 </div>
-                <button type="submit" id="btnsearch" name="search" value="Search" class="btn btn-warning btn-sm wb-btn btn-search">Search</button>
-                <span><a href="<?php echo site_url('citations?collection='.$active_repo);?>" class="btn btn btn-outline-primary btn-sm wb-btn-outline" id="reset"><i class="fa fa-refresh"></i>Reset</a></span>
+                <button type="submit" id="btnsearch" name="search" value="Search" class="btn btn-warning btn-sm wb-btn btn-search"><?php echo t('search');?></button>
+                <span><a href="<?php echo site_url('citations?collection='.$active_repo);?>" class="btn btn btn-outline-primary btn-sm wb-btn-outline" id="reset"><i class="fa fa-refresh"></i><?php echo t('reset');?></a></span>
             </div>
         </div>
 
@@ -32,7 +32,7 @@
                     </div>                    
                 </div>
                 <div class="form-group col">
-                    <button class="btn btn-warning text-white btn-sm">Apply</button>
+                    <button class="btn btn-warning text-white btn-sm"><?php echo t('apply');?></button>
                 </div>    
             </div>
         </div>

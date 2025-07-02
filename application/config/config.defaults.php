@@ -21,7 +21,7 @@ $config['cache_default_expires'] = 60*60*2;//2 hours
 $config['cache_disabled'] = 1;
 
 //site's default language
-$config['language'] = 'english';
+$config['language'] = 'spanish';
 
 /* End of file config.php */
 /* Location: ./system/application/config/config.php */
