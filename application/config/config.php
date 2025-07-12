@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |--------------------------------------------------------------------------
 |
 */
-$config[ 'site_name' ] = 'MinEnergia';
+$config[ 'site_name' ] = 'Catálogo de Datos';
 
 /*
 |--------------------------------------------------------------------------

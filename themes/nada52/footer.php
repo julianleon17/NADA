@@ -4,14 +4,13 @@
   <!-- End footer top section -->
 
   <!-- footer bottom section -->
-  <div class="full-row-footer-black-components bg-primary py-3">
+  <div class="full-row-footer-black-components bg-primary py-3 sticky-bottom">
     <div class="container">
       <div class="footer">
-        <div class="row">
+        <div class="d-flex justify-content-between flex-wrap">
 
           <!-- / footer logo -->
-          <div class="col-12 col-md-6">
-
+          <div class="footer-element py-2">
             <div class="text-center text-lg-left mt-2">
             <?php /* logo ?>
             <a href="<?php echo site_url();?>" class="g01v1-logo nada-logo">
@@ -29,7 +28,7 @@
                 <?php echo $this->config->item("site_name");?>
               </p>
 
-              <div class="col-12 col-md-6 footer-bottom-right d-flex align-items-center justify-content-end">
+              <div class="footer-bottom-right d-flex align-items-center justify-content-end">
                 <a href="<?php echo site_url();?>" class="g01v1-logo nada-logo border-right border-white pr-3">
                   <img style="width:70px;" title="Marca Colombia" src="https://www.minenergia.gov.co/documents/10995/logo_marca_colombia_MME.png" class="img-responsive" />
                 </a>
@@ -74,10 +73,10 @@
           </div> -->
 
           <!-- Copyrights-->
-          <div class="col-12 col-md-6 d-flex align-items-center justify-content-end">
+          <div class="footer-element py-2 d-flex align-items-center justify-content-end">
             <div class="footer-copy-right">
 
-              <p class="text-center text-lg-right m-0">
+              <div class="text-center text-lg-right m-0 text-white">
 
                 <small>
                   ©
@@ -89,13 +88,10 @@
                     document.write(year); // End -->
                   </script> <?php echo $this->config->item("site_name");?>, Todos los derechos reservados.
                 </small>
-              </p>
+              </div>
             </div>
           </div>
           <!-- / Copyrights  -->
-        </div>
-
-        <div class="row">
         </div>
       </div>
     </div>

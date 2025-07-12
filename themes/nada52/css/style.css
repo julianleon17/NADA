@@ -301,7 +301,7 @@ button,
 
 .site-header .navbar-light .navbar-nav .nav-link {
     /* color: var(--color-link); */
-    color: white;
+    /* color: white; */
 }
 
 .site-header .navbar-light .navbar-brand a.active,

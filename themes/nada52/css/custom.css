@@ -12,3 +12,21 @@
 .wb-library-search--browse a {
   color: var(--warning-color);
 }
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #ffd659;
+}
+
+.site-header .navbar-light .navbar-nav .nav-link.active {
+  color: var(--warning-color);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--warning-color);
+}
+
+@media ( max-width: 800px ) {
+  .footer-element {
+    margin: auto;
+  }
+}
