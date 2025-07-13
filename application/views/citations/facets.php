@@ -6,7 +6,7 @@
     <div class="refine-list filter-container">
 
         <div class="sidebar-filter wb-ihsn-sidebar-filter filter-box keyword-search">
-            <h6 class="togglable"> <i class="fa fa-search pr-2"></i>Search by keyword</h6>
+            <h6 class="togglable"> <i class="fa fa-search pr-2"></i><?= t('search_by_keyword') ?></h6>
             <div id="search-by-keyword" class="search-by-keyword sidebar-filter-entries">
                 <div class="form-group study-search">
                     <input maxlength="100" type="text" id="keywords" name="keywords" value="<?php echo form_prep($this->input->get('keywords')); ?>" class="form-control" placeholder="keywords">
@@ -18,17 +18,17 @@
         </div>
 
         <div id="filter-by-access" class="sidebar-filter wb-ihsn-sidebar-filter filter-by-year filter-box">
-            <h6 class="togglable"> <i class="fa fa-search pr-2"></i>Filter by Year</h6>
+            <h6 class="togglable"> <i class="fa fa-search pr-2"></i><?= t('filter_by_year') ?></h6>
             <div class="sidebar-filter-entries">        
                       
                 <div class="form-inline-x">
                     <div class="form-group col">
-                        <label for="year_from">From</label>
-                        <input type="number" min="1600" max="3000" name="from" class="form-control" placeholder="Start year" value="<?php echo form_prep($this->input->get('from'));?>">
+                        <label for="year_from"><?= t('from') ?></label>
+                        <input type="number" min="1600" max="3000" name="from" class="form-control" placeholder="<?= t( 'Start year' ) ?>" value="<?php echo form_prep($this->input->get('from'));?>">
                     </div>
                     <div class="form-group col">
-                        <label for="year_to">To</label>
-                        <input type="number" min="1600" max="3000"  name="to" class="form-control" placeholder="End year" value="<?php echo form_prep($this->input->get('to'));?>">
+                        <label for="year_to"><?= t('to') ?></label>
+                        <input type="number" min="1600" max="3000"  name="to" class="form-control" placeholder="<?= t( 'End year' ) ?>" value="<?php echo form_prep($this->input->get('to'));?>">
                     </div>                    
                 </div>
                 <div class="form-group col">
@@ -39,7 +39,7 @@
 
         <?php if(is_array($ctypes) && count($ctypes)>0):?>
         <div id="filter-by-access" class="sidebar-filter wb-ihsn-sidebar-filter filter-by-access filter-box filter-by-dtype">
-        <h6 class="togglable"> <i class="fa fa-filter pr-2"></i> Filter by Type</h6>
+        <h6 class="togglable"> <i class="fa fa-filter pr-2"></i> <?= t('Filter by Type') ?> </h6>
         <div class="sidebar-filter-entries filter-da items-container">
             <?php foreach($ctypes as $ctype=>$count):?>
             <?php $is_checked=in_array($ctype,$search['ctype']) ? 'checked="checked"' : '';?>

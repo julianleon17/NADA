@@ -38,7 +38,7 @@ $popular_surveys=$this->stats_model->get_popular_surveys(5);
 //get top n recent acquisitions
 $latest_surveys=$this->stats_model->get_latest_surveys(10);	
 
-$this->title='Home';
+$this->title=t('Home');
 
 $data_types=array(
     'survey'=>'Microdata',
@@ -56,8 +56,8 @@ $data_types=array(
 
 <div class="text-center  wb-library-search mb-2 py-2 pt-3">
     <div class="home-page-search-container">
-        <h1 class="wb-library-search-title pt-5 pb-3"><?php echo $this->config->item("website_title"); ?></h1>
-        <div class="sub-text mt-3 mb-0">Search in <strong><?php echo $survey_count; ?></strong> datasets</div>
+        <h1 class="wb-library-search-title pt-5 pb-3"><?php echo $this->config->item("site_name"); ?></h1>
+        <div class="sub-text mt-3 mb-0"><?= t('Search in') ?> <strong><?php echo $survey_count; ?></strong> <?= t('datasets') ?></div>
 
         <div class="d-flex justify-content-center">
             <div class="col-10 col-md-8 ">
@@ -72,7 +72,7 @@ $data_types=array(
                         </div>
                         <!--end of col-->
                         <div class="col-auto">
-                            <button class="btn btn-lg btn-warning text-white" type="submit"><?php echo t('search');?></button>
+                            <button class="btn btn-lg btn-warning text-white" type="submit"><?= t('search') ?></button>
                         </div>
                         <!--end of col-->
 
@@ -80,7 +80,10 @@ $data_types=array(
                 </form>
 
                 <div class="wb-library-search--browse my-3">
-                    <a href="<?php echo site_url('catalog'); ?>"><i class="fa fa-list"></i> Browse Catalog </a>
+                    <a href="<?php echo site_url('catalog'); ?>">
+                      <i class="fa fa-list"></i>
+                      <?= t( 'Browse Catalog' ) ?>
+                    </a>
                 </div>
 
                 <div>
@@ -164,7 +167,26 @@ $data_types=array(
         <?php if (is_array($counts)):?>
         <div class="wb-box-sidebar wb-tab-heading pt-3 pb-3 pr-4 pl-4 text-center mb-3">
 
-            <p>As of <strong><?php echo date("F d, Y",date("U")); ?></strong><br> the catalog contains</p>
+            <p>
+              <?php echo t( 'as_of' ); ?>
+              <strong>
+                <?php
+                  $fecha = new DateTime();
+                  $formatter = new IntlDateFormatter(
+                    'es_CO', // o 'es_ES', 'es_MX', etc.
+                    IntlDateFormatter::LONG,
+                    IntlDateFormatter::NONE,
+                    null,
+                    null,
+                    "MMMM dd, yyyy"
+                  );
+
+                  echo $formatter->format( $fecha );
+                  // echo date( "F d, Y", date( "U" ) );
+                ?>
+              </strong><br>
+              <?php echo t( 'the catalog contains' ); ?>
+            </p>
             <?php foreach($counts as $data_type=>$count):?>
                 <?php if($count>0):?>
                     <h3 class="mb-0"><?php echo number_format($count);?></h3>
@@ -172,7 +194,7 @@ $data_types=array(
                 <?php endif;?>
             <?php endforeach;?>
             
-            <a class="btn btn-warning text-white btn-block" href="<?php echo site_url('catalog/central');?>" title="Data catalog">Catalog</a>
+            <a class="btn btn-warning text-white btn-block" href="<?php echo site_url('catalog/central');?>" title="Data catalog"><?php echo t( 'Catalog' ); ?></a>
         </div>
         <?php endif;?>
         <?php if (isset($popular_surveys) && is_array($popular_surveys) && count($popular_surveys)>0):?>

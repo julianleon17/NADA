@@ -36,7 +36,9 @@ class MY_Controller extends CI_Controller
 		$this->_switch_language();
 		$this->lang->load("general");
 		$this->load->model('Permissions_model');
-			
+
+    $this->lang->load( 'site', 'spanish' );
+
 		$this->load->library(array('site_configurations','session','ion_auth','form_validation','acl_manager'));	
 		$this->is_admin=$is_admin;
 		
