@@ -9,7 +9,7 @@
             <h6 class="togglable"> <i class="fa fa-search pr-2"></i><?= t('search_by_keyword') ?></h6>
             <div id="search-by-keyword" class="search-by-keyword sidebar-filter-entries">
                 <div class="form-group study-search">
-                    <input maxlength="100" type="text" id="keywords" name="keywords" value="<?php echo form_prep($this->input->get('keywords')); ?>" class="form-control" placeholder="keywords">
+                    <input maxlength="100" type="text" id="keywords" name="keywords" value="<?php echo form_prep($this->input->get('keywords')); ?>" class="form-control" placeholder="<?= t('keywords') ?>">
                     <input type="hidden" name="collection" value="<?php echo form_prep($active_repo);?>"/>
                 </div>
                 <button type="submit" id="btnsearch" name="search" value="Search" class="btn btn-warning btn-sm wb-btn btn-search"><?php echo t('search');?></button>
